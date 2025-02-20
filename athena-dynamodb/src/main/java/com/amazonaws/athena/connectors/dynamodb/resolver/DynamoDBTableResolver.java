@@ -98,8 +98,10 @@ public class DynamoDBTableResolver
             List<String> responseTableNames = response.tableNames();
 
             if (!allowedTables.isEmpty()) {
+                logger.info("Filtering for allowed tables is being used.");
                 responseTableNames.forEach(tableName -> {
                     if (allowedTables.contains(tableName)) {
+                        logger.info("{} included into tables-to-scan", tableName);
                         tables.add(tableName);
                     }
                     else {
@@ -108,6 +110,7 @@ public class DynamoDBTableResolver
                 });
             }
             else {
+                logger.info("No filtering for allowed tables.");
                 tables.addAll(responseTableNames);
             }
 

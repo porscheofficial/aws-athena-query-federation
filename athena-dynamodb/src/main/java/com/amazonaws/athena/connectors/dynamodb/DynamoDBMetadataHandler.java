@@ -159,6 +159,7 @@ public class DynamoDBMetadataHandler
         this.invoker = ThrottlingInvoker.newDefaultBuilder(EXCEPTION_FILTER, configOptions).build();
 
         String allowedTablesEnvStr = configOptions.getOrDefault(ALLOWED_TABLES_ENV, "");
+        logger.info("Allowed tables are configured with the following value: [{}]", allowedTablesEnvStr);
         List<String> allowedTables = new ArrayList<>();
         if (!allowedTablesEnvStr.isEmpty()) {
             allowedTables = Arrays.asList(allowedTablesEnvStr.split(";", -1));
