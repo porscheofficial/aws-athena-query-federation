@@ -97,8 +97,7 @@ Resources:
       FunctionName: !Ref AthenaCatalogName
       PackageType: "Image"
       ImageUri: !Sub
-        - '${Account}.dkr.ecr.${AWS::Region}.amazonaws.com/athena-federation-repository-dynamodb:2025.7.1'
-        - Account: !If [IsRegionBAH, 084828588479, !If [IsRegionHKG, 183295418215, 292517598671]]
+        - '${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/athena-federation-repository-dynamodb:2025.7.1'
       Description: "Enables Amazon Athena to communicate with DynamoDB, making your tables accessible via SQL"
       Timeout: !Ref LambdaTimeout
       MemorySize: !Ref LambdaMemory
