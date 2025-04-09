@@ -3,16 +3,16 @@
     <parent>
         <artifactId>aws-athena-query-federation</artifactId>
         <groupId>com.amazonaws</groupId>
-        <version>2025.7.1</version>
+        <version>2025.14.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>athena-jdbc</artifactId>
-    <version>2025.7.1</version>
+    <version>2025.14.1</version>
     <dependencies>
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>aws-athena-federation-sdk</artifactId>
-            <version>2025.7.1</version>
+            <version>2025.14.1</version>
             <classifier>withdep</classifier>
             <exclusions>
                 <!-- replaced with jcl-over-slf4j -->
@@ -25,8 +25,13 @@
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>athena-federation-integ-test</artifactId>
-            <version>2025.7.1</version>
+            <version>2025.14.1</version>
             <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>com.zaxxer</groupId>
+            <artifactId>HikariCP</artifactId>
+            <version>6.3.0</version>
         </dependency>
         <dependency>
             <groupId>org.apache.commons</groupId>
@@ -140,7 +145,7 @@
         <dependency>
             <groupId>com.github.spotbugs</groupId>
             <artifactId>spotbugs-annotations</artifactId>
-            <version>4.9.1</version>
+            <version>4.9.3</version>
             <scope>compile</scope>
         </dependency>
     </dependencies>
