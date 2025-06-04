@@ -13,13 +13,13 @@ RUN yum update -y
 RUN yum install -y curl perl openssl11
 
 # Copy function code and runtime dependencies from Maven layout
-COPY target/athena-docdb-2025.14.1.jar ${LAMBDA_TASK_ROOT}
+COPY target/athena-docdb-2025.22.1.jar ${LAMBDA_TASK_ROOT}
 
 # Unpack the jar
-RUN jar xf athena-docdb-2025.14.1.jar
+RUN jar xf athena-docdb-2025.22.1.jar
 
 # Clean up JAR
-RUN rm ${LAMBDA_TASK_ROOT}/athena-docdb-2025.14.1.jar
+RUN rm ${LAMBDA_TASK_ROOT}/athena-docdb-2025.22.1.jar
 
 # Set up environment variables
 ENV truststore=/var/lang/lib/security/cacerts
@@ -48,4 +48,4 @@ RUN echo "Trust store content is: " && \
     done
 
 # Set the CMD to your handler
-CMD [ "com.amazonaws.athena.connectors.docdb.DocDBCompositeHandler" ]
+# No need to specify here (already defined in .yaml file)
