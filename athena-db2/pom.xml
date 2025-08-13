@@ -3,27 +3,27 @@
     <parent>
         <artifactId>aws-athena-query-federation</artifactId>
         <groupId>com.amazonaws</groupId>
-        <version>2025.22.1</version>
+        <version>2025.31.1</version>
     </parent>
     <modelVersion>4.0.0</modelVersion>
     <artifactId>athena-db2</artifactId>
-    <version>2025.22.1</version>
+    <version>2025.31.1</version>
     <dependencies>
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>athena-federation-integ-test</artifactId>
-            <version>2025.22.1</version>
+            <version>2025.31.1</version>
             <scope>test</scope>
         </dependency>
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>athena-jdbc</artifactId>
-            <version>2025.22.1</version>
+            <version>2025.31.1</version>
         </dependency>
         <dependency>
             <groupId>com.amazonaws</groupId>
             <artifactId>athena-jdbc</artifactId>
-            <version>2025.22.1</version>
+            <version>2025.31.1</version>
             <type>test-jar</type>
             <scope>test</scope>
         </dependency>
@@ -31,7 +31,7 @@
         <dependency>
             <groupId>com.ibm.db2</groupId>
             <artifactId>jcc</artifactId>
-            <version>11.5.9.0</version>
+            <version>12.1.2.0</version>
         </dependency>
         <!-- https://mvnrepository.com/artifact/software.amazon.awssdk/rds -->
         <dependency>
