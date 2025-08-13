@@ -10,7 +10,7 @@ Metadata:
     Labels:
       - athena-federation
     HomePageUrl: 'https://github.com/porscheofficial/aws-athena-query-federation'
-    SemanticVersion: 2025.22.1
+    SemanticVersion: 2025.31.1
     SourceCodeUrl: 'https://github.com/porscheofficial/aws-athena-query-federation'
 Parameters:
   AthenaCatalogName:
@@ -96,7 +96,7 @@ Resources:
           kms_key_id: !If [HasKMSKeyId, !Ref KMSKeyId, !Ref "AWS::NoValue"]
       FunctionName: !Ref AthenaCatalogName
       PackageType: "Image"
-      ImageUri: !Sub '${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/athena-federation-repository-dynamodb:2025.22.1'
+      ImageUri: !Sub '${AWS::AccountId}.dkr.ecr.${AWS::Region}.amazonaws.com/athena-federation-repository-dynamodb:2025.31.1'
       ImageConfig:
         Command: [ "com.amazonaws.athena.connectors.dynamodb.DynamoDBCompositeHandler" ]
       Description: "Enables Amazon Athena to communicate with DynamoDB, making your tables accessible via SQL"
